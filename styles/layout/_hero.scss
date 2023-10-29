@@ -1,0 +1,90 @@
+.hero {
+      background-image: url(../assets/hero/hero.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+.hero-container {
+      position: relative;
+      padding-top: 100px;
+      padding-bottom: 120px;
+      @include flex(row, space-between, start);
+      flex-wrap: wrap;
+
+      .hero__title {
+            color: #fff;
+            margin-bottom: 62px;
+      }
+      .hero__subtitle {
+            color: #fff;
+            margin-bottom: 80px;
+      }
+      .hero__text {
+            max-width: 560px;
+
+            .hero__list {
+                  margin-bottom: 25px;
+
+                  .hero__item {
+                        position: relative;
+                        color: #fff;
+                        font-size: 0.8em;
+                        font-weight: 500;
+                        padding-left: 15px;
+                        margin-bottom: 5px;
+
+                        &:before {
+                              content: "";
+                              position: absolute;
+                              left: 0;
+                              top: calc(50% - 3px);
+                              width: 6px;
+                              height: 6px;
+                              border-radius: 100%;
+                              background: #ff0000;
+                        }
+                  }
+            }
+            .hero__footnotes {
+                  color: #cbcbcb;
+                  font-size: 0.75em;
+                  font-weight: 500;
+            }
+      }
+      .hero__more {
+            margin-top: 82px;
+            @include flex(column);
+            max-width: 335px;
+
+            h2 {
+                  color: #ff0000;
+                  font-size: 1.75em;
+                  font-weight: 700;
+                  margin-bottom: 15px;
+                  text-transform: uppercase;
+            }
+            img {
+                  width: 18px;
+                  height: 46px;
+            }
+      }
+}
+@media (max-width: 1440px) {
+      .hero-container {
+            padding-top: 80px;
+            padding-bottom: 60px;
+
+            .hero__title {
+                  margin-bottom: 40px;
+            }
+            .hero__subtitle {
+                  margin-bottom: 50px;
+            }
+            .hero__text {
+                  max-width: 50%;
+            }
+            .hero__more {
+                  margin-top: 20px;
+                  max-width: 400px;
+            }
+      }
+}

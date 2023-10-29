@@ -1,0 +1,88 @@
+.ambitions {
+      margin-top: 120px;
+      margin-bottom: 160px;
+}
+.ambition-container {
+      @include flex(row, space-between, start);
+      gap: 10px;
+      flex-wrap: wrap;
+
+      .ambition__content {
+            @include flex(column, start, start);
+            gap: 40px;
+            max-width: 370px;
+            margin-top: 20px;
+
+            h2,
+            p {
+                  color: #282828;
+            }
+            h2 {
+                  font-size: 2em;
+                  span {
+                        color: #ff0000;
+                  }
+            }
+      }
+      .ambition__img{
+            margin-right: -150px;
+            width: 750px;
+      }
+      .ambition__input:nth-child(3),
+      .ambition__input:nth-child(4),
+      .ambition__input:nth-child(5){
+            max-width: 328px;
+            width: 30%;
+      }
+      .ambition__input:nth-child(6){
+            max-width: 400px;
+            width: 39%;
+      }
+      .btn{
+            text-align: center;
+            max-width: 59%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+      }
+}
+@media (max-width: 1770px) {
+      .ambition-container{
+            overflow: hidden;
+      }
+}
+@media (max-width: 1440px) {
+      .ambition-container {
+
+      .ambition__content {
+            gap: 20px;
+      }
+      .ambition__input:nth-child(3),
+      .ambition__input:nth-child(4),
+      .ambition__input:nth-child(5),
+      .ambition__input:nth-child(6){
+            max-width: unset;
+            width: 45%;
+      }
+      .btn{
+            max-width: unset;
+            width: 100%;
+      }
+}
+}
+@media (max-width: 768px) {
+      .ambition-container {
+
+      .ambition__content {
+            gap: 20px;
+      }
+      .ambition__input:nth-child(3),
+      .ambition__input:nth-child(4),
+      .ambition__input:nth-child(5),
+      .ambition__input:nth-child(6){
+            max-width: unset;
+            width: 100%;
+      }
+      .btn{
+      }
+}
+}

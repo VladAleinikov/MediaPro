@@ -1,0 +1,31 @@
+.moment{
+      padding-top: 140px;
+      padding-bottom: 130px;
+      background-image: url(../assets/moment/moment-bg.png);
+}
+.moment-container{
+      @include flex($align: start);
+      flex-wrap: wrap;
+      gap: 50px;
+
+      h2, p{
+            color: #fff;
+      }
+      .moment-content{
+            max-width: 470px;
+            @include flex(column);
+            gap: 50px;
+            
+            .moment__text{
+                  font-weight: 400;
+                  margin-bottom: 30px;
+            }
+            .btn{
+                  text-align: center;
+                  width: 100%;
+            }
+      }
+      img{
+            max-width: 460px;
+      }
+}

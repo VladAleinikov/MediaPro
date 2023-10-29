@@ -1,0 +1,46 @@
+.hero-sidebar {
+      position: absolute;
+      left: 0px;
+      top: 100px;
+      width: 340px;
+      padding: 56px 44px;
+      background: #f3f2f2;
+      border-radius: 20px;
+
+      .sidebar__title {
+            margin-bottom: 54px;
+
+            span {
+                  color: #ff0000;
+            }
+      }
+      .sidebar__links {
+            color: #282828;
+            font-size: 1em;
+            line-height: 35px;
+            text-decoration: underline;
+            margin-bottom: 85px;
+      }
+      .sidebar__btn {
+            width: 330px;
+      }
+}
+@media (max-width: 1440px) {
+      .hero-sidebar {
+            margin-top: 20px;
+            position: relative;
+            top: 0;
+            width: 280px;
+            padding: 40px 35px;
+            .sidebar__title {
+                  margin-bottom: 30px;
+            }
+            .sidebar__links {
+                  margin-bottom: 40px;
+            }
+            .btn {
+                  width: 260px;
+                  padding: 20px 18px;
+            }
+      }
+}

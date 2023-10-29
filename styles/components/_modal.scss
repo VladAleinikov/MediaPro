@@ -1,0 +1,84 @@
+#modal-bg {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      background: rgba($color: #fff, $alpha: 0.6);
+      z-index: 100000;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.5s;
+
+      &.active {
+            opacity: 1;
+            visibility: visible;
+      }
+}
+.modal {
+      @include flex($just: space-between);
+      flex-wrap: wrap;
+      position: fixed;
+      top: calc(50% - 300px);
+      left: calc(50% - 300px);
+      width: 600px;
+      height: 600px;
+      padding: 20px;
+      background: #282828;
+      border-radius: 10px;
+      z-index: 100001;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.5s;
+
+      h2 {
+            color: #fff;
+      }
+      #close-modal {
+            cursor: pointer;
+
+            svg {
+                  width: 40px;
+                  height: 40px;
+            }
+      }
+      form {
+            width: 100%;
+            padding: 40px;
+
+            .btn {
+                  width: 100%;
+                  text-align: center;
+                  margin-bottom: 20px;
+            }
+            input[type="checkbox"]{
+                  width: fit-content;
+                  height: fit-content;
+                  margin: 0;
+                  margin-right: 10px;
+            }
+            label {
+                  color: #b1b1b1;
+
+                  span {
+                        color: #fff;
+                        text-decoration: underline;
+                  }
+            }
+      }
+      &.active {
+            opacity: 1;
+            visibility: visible;
+      }
+}
+@media (max-width: 768px) {
+.modal{
+      
+      width: 100%;
+      height: fit-content;
+      left: 0;
+      form{
+            padding: 20px;
+      }
+}
+}
